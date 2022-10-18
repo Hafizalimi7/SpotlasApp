@@ -8,7 +8,7 @@ import 'dart:convert';
 
 List<FeedsResponse> feedsResponseFromJson(String str) => List<FeedsResponse>.from(json.decode(str).map((x) => FeedsResponse.fromJson(x)));
 
-String feedsResponseToJson(List<FeedsResponse> data) => json.encode(List<dynamic>.from(data.map((x) => x.json())));
+String feedsResponseToJson(List<FeedsResponse> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class FeedsResponse {
     FeedsResponse({
@@ -39,7 +39,7 @@ class FeedsResponse {
     dynamic tags;
     String url;
 
-    factory FeedsResponse.fromJson(Map<String, dynamic> json) => Instruction(
+    factory FeedsResponse.fromJson(Map<String, dynamic> json) => FeedsResponse(
         id: json["id"],
         caption: Caption.fromJson(json["caption"]),
         media: List<Media>.from(json["media"].map((x) => Media.fromJson(x))),
