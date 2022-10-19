@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart' hide Headers;
 import 'package:retrofit/http.dart';
-import 'package:spotlas/model/feed.dart';
+import 'package:spotlas/models/feeds.dart';
 
 part 'data_service.g.dart';
 

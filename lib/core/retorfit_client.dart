@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
+
 import 'data_service.dart';
 
-const String _baseurl = "https://dev.api.spotlas.com/";
+const String _baseUrl = "https://dev.api.spotlas.com/";
+
 
 class RetrofitClientInstance {
   static RetrofitClientInstance _instance = RetrofitClientInstance._internal();
@@ -16,7 +18,7 @@ class RetrofitClientInstance {
     _dio?.options.headers["accept"] = "application/json";
     _dio?.options.headers["Authorization"] =
         authToken?.isEmpty == true ? '' : 'Bearer $authToken';
-    _dio?.options.connectTimeout = (1 * 30 * 1000); //setting time out
+    _dio?.options.connectTimeout = (1 * 30 * 1000);  //setting time out
     if (!kReleaseMode) {
       _dio?.interceptors
           .add(LogInterceptor(responseBody: true, requestBody: true));//adding interceptor
@@ -32,9 +34,10 @@ class RetrofitClientInstance {
   GetDataService getDataService() {
     return _client;
   }
-
-  //this is called for setting token
-  void reset(String authToekn) {
-    _instance = RetrofitClientInstance._internal(authToken)
+//this is called for setting token
+  void reset(String authToken) {
+    _instance = RetrofitClientInstance._internal(authToken);
   }
 }
+
+
