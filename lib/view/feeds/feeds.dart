@@ -66,7 +66,8 @@ class _FeedsState extends State<Feeds> {
                 color: Colors.red,
               ),
             ),
-          ):Column(
+          ):
+          Column(
             children: [
               ListView.builder(
                   shrinkWrap: true,

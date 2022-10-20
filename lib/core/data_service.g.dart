@@ -31,7 +31,7 @@ class _GetDataService implements GetDataService {
             .compose(_dio.options, 'interview/feed',
                 queryParameters: queryParameters, data: _data)
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-
+    
     final value = List<FeedsResponse>.from(
         _result.data.map((e) => FeedsResponse.fromJson(e))).toList();
     
