@@ -29,7 +29,7 @@ class FeedsResponse {
     String id;
     Caption caption;
     List<Media> media;
-    DateTime createdAt;
+    String createdAt;
     Author author;
     Spot spot;
     dynamic relevantComments;
@@ -43,7 +43,7 @@ class FeedsResponse {
         id: json["id"],
         caption: Caption.fromJson(json["caption"]),
         media: List<Media>.from(json["media"].map((x) => Media.fromJson(x))),
-        createdAt: DateTime.parse(json["created_at"]),
+        createdAt: json["created_at"] == null ? null : json["created_at"],
         author: Author.fromJson(json["author"]),
         spot: Spot.fromJson(json["spot"]),
         relevantComments: json["relevant_comments"],
@@ -58,7 +58,7 @@ class FeedsResponse {
         "id": id,
         "caption": caption.toJson(),
         "media": List<dynamic>.from(media.map((x) => x.toJson())),
-        "created_at": createdAt.toIso8601String(),
+        "created_at": createdAt ==null? null : createdAt,
         "author": author.toJson(),
         "spot": spot.toJson(),
         "relevant_comments": relevantComments,

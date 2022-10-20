@@ -16,7 +16,7 @@ class _GetDataService implements GetDataService {
 
   final Dio _dio;
 
-  String? baseUrl;
+  String baseUrl;
 
   Future<List<FeedsResponse>> getFeeds(page, limit) async {
     final queryParameters = <String, dynamic>{
