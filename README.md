@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+This project does not support null safety. You will need to compile without sound null safety 
+"flutter run --no-sound-null-safety" 
+To run for ios platform, launch the ios simulator and type this command in the emulator "flutter run --no-sound-null-safety" 
+To run for android platform , launch the android emulator and type this command in the emulator "flutter run --no-sound-null-safety"
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -12,15 +17,15 @@ This project is a starting point for a Flutter application.
 clone repo
 https://github.com/Hafizalimi7/SpotlasApp.git
 
+# ios
+- open ios/Runner.xcworkspace
+- cd ios
+- pod install
+- build on Xcode
+- cd ..
+- flutter run --no-sound-null-safety
+- flutter run 
 
-````console
-open ios/Runner.xcworkspace
-cd ios
-pod install
-build on Xcode
-cd ..
-flutter run 
-````
 
 
 A few resources to get you started if this is your first Flutter project:
