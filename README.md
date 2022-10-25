@@ -12,7 +12,7 @@ To run for android platform , launch the android emulator and type this command 
 This project is a starting point for a Flutter application.
 
 
-# How to use
+# How to use 
 
 clone repo
 https://github.com/Hafizalimi7/SpotlasApp.git
