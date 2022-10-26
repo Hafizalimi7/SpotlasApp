@@ -26,6 +26,11 @@ https://github.com/Hafizalimi7/SpotlasApp.git
 - flutter run --no-sound-null-safety
 - flutter run 
 
+# Screenshots
+![](screenshots/spotlas1.png)
+![](screenshots/spotlas2.png)
+![](screenshots/spotlas3.png)
+
 
 
 A few resources to get you started if this is your first Flutter project:
