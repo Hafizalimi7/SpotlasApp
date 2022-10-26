@@ -29,7 +29,6 @@ https://github.com/Hafizalimi7/SpotlasApp.git
 # Screenshots
 ![](screenshots/spotlas1.png)
 ![](screenshots/spotlas2.png)
-![](screenshots/spotlas3.png)
 
 
 
